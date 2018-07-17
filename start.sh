@@ -31,7 +31,7 @@ do
     do
         IP=''
         http_port=$((BASE_HTTP_PORT+i))
-        IP=$(curl -s -x http://127.0.0.1:$http_port http://echoip.com/)
+        IP=$(curl -s -x http://127.0.0.1:$http_port https://api.ipify.org)
         echo "`date` Monitoring proxy #$i port $http_port. Outgoing IP : $IP"
     done
 
